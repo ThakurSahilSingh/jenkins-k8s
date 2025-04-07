@@ -2,7 +2,7 @@ apiVersion: apps/v1
 kind: Deployment
 metadata:
   name: sample-ci-cd
-  namespace: jenkins
+  #namespace: jenkins
 spec:
   replicas: 2
   selector:
@@ -13,7 +13,7 @@ spec:
       labels:
         app: sample-ci-cd
     spec:
-      serviceAccountName: jenkins
+      #serviceAccountName: jenkins
       containers:
       - name: sample-ci-cd
         image: prabsin/sample-ci-cd:latest
